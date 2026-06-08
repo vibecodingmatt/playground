@@ -40,18 +40,18 @@ export default function GenAIMission() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-red-950 to-slate-950 text-slate-100 overflow-hidden">
       {/* Animated background grid */}
       <div className="fixed inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0 bg-grid-pattern" style={{
-          backgroundImage: 'linear-gradient(0deg, transparent 24%, rgba(168, 85, 247, 0.1) 25%, rgba(168, 85, 247, 0.1) 26%, transparent 27%, transparent 74%, rgba(168, 85, 247, 0.1) 75%, rgba(168, 85, 247, 0.1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(168, 85, 247, 0.1) 25%, rgba(168, 85, 247, 0.1) 26%, transparent 27%, transparent 74%, rgba(168, 85, 247, 0.1) 75%, rgba(168, 85, 247, 0.1) 76%, transparent 77%, transparent)',
+          backgroundImage: 'linear-gradient(0deg, transparent 24%, rgba(220, 38, 38, 0.1) 25%, rgba(220, 38, 38, 0.1) 26%, transparent 27%, transparent 74%, rgba(220, 38, 38, 0.1) 75%, rgba(220, 38, 38, 0.1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(220, 38, 38, 0.1) 25%, rgba(220, 38, 38, 0.1) 26%, transparent 27%, transparent 74%, rgba(220, 38, 38, 0.1) 75%, rgba(220, 38, 38, 0.1) 76%, transparent 77%, transparent)',
           backgroundSize: '50px 50px'
         }} />
       </div>
 
       {/* Easter egg counter */}
       {easterEggCount > 0 && (
-        <div className="fixed top-4 right-4 px-4 py-2 bg-pink-600/50 border border-pink-400 rounded text-sm z-50 animate-pulse">
+        <div className="fixed top-4 right-4 px-4 py-2 bg-red-600/50 border border-red-400 rounded text-sm z-50 animate-pulse">
           👼 Easter Eggs Found: {easterEggCount}
         </div>
       )}
@@ -60,12 +60,12 @@ export default function GenAIMission() {
       <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center animate-fade-in">
           <div className="mb-6 inline-block">
-            <div className="px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-full text-pink-300 font-mono text-sm">
+            <div className="px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full text-red-300 font-mono text-sm">
               <span className="animate-pulse">📞</span> CASE FILE: CLASSIFIED
             </div>
           </div>
 
-          <h1 className="text-6xl md:text-7xl font-black mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-6xl md:text-7xl font-black mb-6 bg-gradient-to-r from-red-400 via-white to-red-300 bg-clip-text text-transparent leading-tight">
             MARTY'S ANGELS
           </h1>
 
@@ -76,7 +76,7 @@ export default function GenAIMission() {
           <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed italic">
             One visionary manager. Three elite engineers. One Fortune 50 company. 
             <br />
-            <span className="text-pink-400 font-mono">They answer to nobody but Marty.</span>
+            <span className="text-red-400 font-mono">They answer to nobody but Marty.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

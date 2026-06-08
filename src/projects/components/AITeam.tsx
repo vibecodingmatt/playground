@@ -88,7 +88,7 @@ export function Team() {
   return (
     <div>
       {/* Manager Card (Marty's Angels Briefing Room) */}
-      <div className="mb-16 p-8 bg-gradient-to-br from-pink-900/40 to-purple-900/40 border-2 border-pink-500/50 rounded-lg">
+      <div className="mb-16 p-8 bg-gradient-to-br from-red-900/40 to-red-800/40 border-2 border-red-500/50 rounded-lg">
         <button
           onClick={() => setShowManager(!showManager)}
           className="w-full text-left group"
@@ -97,8 +97,8 @@ export function Team() {
             <div className="flex items-center gap-4">
               <div className="text-7xl group-hover:scale-110 transition-transform">📞</div>
               <div>
-                <h2 className="text-3xl font-bold text-white group-hover:text-pink-300 transition-colors">Marty</h2>
-                <p className="text-pink-400 font-mono text-lg">→ Mission Control & Fearless Manager</p>
+                <h2 className="text-3xl font-bold text-white group-hover:text-red-300 transition-colors">Marty</h2>
+                <p className="text-red-400 font-mono text-lg">→ Mission Control & Fearless Manager</p>
               </div>
             </div>
             <span className={`text-3xl transform transition-transform ${showManager ? 'rotate-180' : ''}`}>
@@ -111,12 +111,12 @@ export function Team() {
           {showManager && (
             <div className="mt-6 space-y-4 animate-slide-up">
               <div>
-                <h3 className="text-pink-400 font-bold mb-2">Leadership Philosophy</h3>
+                <h3 className="text-red-400 font-bold mb-2">Leadership Philosophy</h3>
                 <p className="text-slate-200">"{manager.philosophy}"</p>
               </div>
 
               <div>
-                <h3 className="text-pink-400 font-bold mb-2">Greatest Strength</h3>
+                <h3 className="text-red-400 font-bold mb-2">Greatest Strength</h3>
                 <p className="text-slate-200">{manager.greatestStrength}</p>
               </div>
 
@@ -125,11 +125,11 @@ export function Team() {
               </div>
 
               <div>
-                <h3 className="text-pink-400 font-bold mb-3">Legendary Achievements</h3>
+                <h3 className="text-red-400 font-bold mb-3">Legendary Achievements</h3>
                 <ul className="space-y-2">
                   {manager.achievements.map((achievement, i) => (
                     <li key={i} className="text-slate-300 flex items-center gap-2">
-                      <span className="text-pink-400">★</span> {achievement}
+                      <span className="text-red-400">★</span> {achievement}
                     </li>
                   ))}
                 </ul>
@@ -153,9 +153,9 @@ export function Team() {
           >
             {/* Glow effect */}
             <div className={`absolute inset-0 bg-gradient-to-br rounded-lg blur opacity-0 group-hover:opacity-100 transition-all duration-300 ${
-              engineer.name === 'Jonathan' ? 'from-cyan-500 to-blue-600' :
-              engineer.name === 'Pan' ? 'from-purple-500 to-pink-600' :
-              'from-blue-500 to-purple-600'
+              engineer.name === 'Jonathan' ? 'from-red-500 to-red-600' :
+              engineer.name === 'Pan' ? 'from-red-600 to-rose-600' :
+              'from-red-400 to-red-600'
             }`} />
 
             {/* Card */}
@@ -165,8 +165,8 @@ export function Team() {
 
               {/* Name and title */}
               <h3 className="text-2xl font-bold text-white mb-1">{engineer.name}</h3>
-              <p className="text-sm font-mono text-pink-400 mb-1">→ {engineer.title}</p>
-              <p className="text-xs font-mono text-purple-400 mb-4">// {engineer.role}</p>
+              <p className="text-sm font-mono text-red-400 mb-1">→ {engineer.title}</p>
+              <p className="text-xs font-mono text-rose-400 mb-4">// {engineer.role}</p>
 
               {/* Bio */}
               <p className="text-slate-300 italic mb-4 min-h-10">{engineer.bio}</p>
@@ -175,9 +175,9 @@ export function Team() {
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
                   <span className={`${
-                    engineer.name === 'Jonathan' ? 'text-cyan-400' :
-                    engineer.name === 'Pan' ? 'text-purple-400' :
-                    'text-blue-400'
+                    engineer.name === 'Jonathan' ? 'text-red-400' :
+                    engineer.name === 'Pan' ? 'text-rose-400' :
+                    'text-red-400'
                   }`}>⚡ Superpower:</span>
                   <span className="text-slate-300">{engineer.superpower}</span>
                 </div>
@@ -211,15 +211,15 @@ export function Team() {
               <div className="text-7xl">{selectedEngineer.emoji}</div>
               <div>
                 <h2 className="text-4xl font-bold text-white mb-2">{selectedEngineer.name}</h2>
-                <p className="text-pink-400 font-mono text-lg">// {selectedEngineer.title}</p>
-                <p className="text-purple-400 font-mono text-sm">→ {selectedEngineer.role}</p>
+                <p className="text-red-400 font-mono text-lg">// {selectedEngineer.title}</p>
+                <p className="text-rose-400 font-mono text-sm">→ {selectedEngineer.role}</p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               {/* Left column */}
               <div>
-                <h3 className="text-xl font-bold text-pink-400 mb-3">Mission Profile</h3>
+                <h3 className="text-xl font-bold text-red-400 mb-3">Mission Profile</h3>
                 <p className="text-slate-300 mb-6">{selectedEngineer.bio}</p>
 
                 <h3 className="text-xl font-bold text-cyan-400 mb-3">Superpowers</h3>
@@ -231,12 +231,12 @@ export function Team() {
 
               {/* Right column */}
               <div>
-                <h3 className="text-xl font-bold text-purple-400 mb-3">In Their Own Words</h3>
+                <h3 className="text-xl font-bold text-red-400 mb-3">In Their Own Words</h3>
                 <div className="bg-slate-800/50 border border-slate-700 rounded p-4 mb-6">
                   <p className="text-slate-200 italic font-serif">{selectedEngineer.quote}</p>
                 </div>
 
-                <h3 className="text-xl font-bold text-purple-400 mb-3">Specializations</h3>
+                <h3 className="text-xl font-bold text-rose-400 mb-3">Specializations</h3>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedEngineer.skills.map((skill) => (
                     <span
@@ -254,7 +254,7 @@ export function Team() {
             </div>
 
             {/* Marty's take on this Angel */}
-            <div className="bg-pink-900/20 border border-pink-700/50 rounded-lg p-6">
+            <div className="bg-red-900/20 border border-red-700/50 rounded-lg p-6">
               <h3 className="text-lg font-bold text-white mb-3">💬 Marty's Take</h3>
               <p className="text-slate-300 italic">
                 "{selectedEngineer.name} is exactly what this mission needed. I send {selectedEngineer.name} on a mission, 
@@ -269,19 +269,19 @@ export function Team() {
       )}
 
       {/* Team Dynamic */}
-      <div className="mt-16 p-8 bg-gradient-to-r from-slate-900/50 to-purple-900/50 border border-slate-700 rounded-lg">
+      <div className="mt-16 p-8 bg-gradient-to-r from-slate-900/50 to-red-900/50 border border-slate-700 rounded-lg">
         <h3 className="text-2xl font-bold text-white mb-4">✨ The Magic: How Marty's Angels Work Together</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
-            <h4 className="font-bold text-cyan-400 mb-2">Jonathan → Pan</h4>
+            <h4 className="font-bold text-red-400 mb-2">Jonathan → Pan</h4>
             <p className="text-slate-300 text-sm">Architecture meets design. Complex becomes elegant.</p>
           </div>
           <div>
-            <h4 className="font-bold text-purple-400 mb-2">Pan → Jake</h4>
+            <h4 className="font-bold text-rose-400 mb-2">Pan → Jake</h4>
             <p className="text-slate-300 text-sm">Design meets infrastructure. Beauty becomes reliable.</p>
           </div>
           <div>
-            <h4 className="font-bold text-blue-400 mb-2">Jake → Jonathan</h4>
+            <h4 className="font-bold text-red-400 mb-2">Jake → Jonathan</h4>
             <p className="text-slate-300 text-sm">Infrastructure meets architecture. Ideas become reality.</p>
           </div>
         </div>
