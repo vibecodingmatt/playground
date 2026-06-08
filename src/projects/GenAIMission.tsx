@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Team } from './components/AITeam'
 import { MissionTimeline } from './components/MissionTimeline'
 import { AIHallucinations } from './components/AIHallucinations'
@@ -8,6 +8,7 @@ export default function GenAIMission() {
   const [deploymentPercent, setDeploymentPercent] = useState(0)
   const [easterEggCount, setEasterEggCount] = useState(0)
   const [showBriefing, setShowBriefing] = useState(false)
+  const teamRef = useRef<HTMLDivElement>(null)
   
   // Konami code easter egg
   useEffect(() => {
@@ -82,11 +83,14 @@ export default function GenAIMission() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button 
               onClick={() => setShowBriefing(!showBriefing)}
-              className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-pink-500/50 hover:-translate-y-1 transition-all text-lg"
+              className="px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-red-500/50 hover:-translate-y-1 transition-all text-lg"
             >
               📡 Read Mission Briefing
             </button>
-            <button className="px-8 py-4 border-2 border-pink-500 text-pink-400 font-bold rounded-lg hover:bg-pink-500/10 transition-all text-lg">
+            <button 
+              onClick={() => teamRef.current?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-4 border-2 border-red-500 text-red-400 font-bold rounded-lg hover:bg-red-500/10 transition-all text-lg"
+            >
               👼 Meet the Team
             </button>
           </div>
@@ -101,12 +105,12 @@ export default function GenAIMission() {
           {/* Deployment Progress */}
           <div className="bg-slate-900/50 border border-slate-700 rounded-lg p-6 max-w-2xl mx-auto backdrop-blur">
             <div className="flex justify-between mb-2">
-              <span className="text-sm font-mono text-pink-400">MISSION PROGRESS</span>
+              <span className="text-sm font-mono text-red-400">MISSION PROGRESS</span>
               <span className="text-sm font-mono text-slate-400">{Math.floor(deploymentPercent)}%</span>
             </div>
             <div className="w-full bg-slate-800 rounded-full h-3 overflow-hidden">
               <div 
-                className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 h-full transition-all duration-300"
+                className="bg-gradient-to-r from-red-600 via-red-500 to-rose-500 h-full transition-all duration-300"
                 style={{ width: `${Math.min(deploymentPercent, 100)}%` }}
               />
             </div>
@@ -122,8 +126,8 @@ export default function GenAIMission() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
-        <h2 className="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+      <section ref={teamRef} className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+        <h2 className="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-red-400 to-white bg-clip-text text-transparent">
           👼 The Angels
         </h2>
         <p className="text-center text-slate-400 mb-16 italic max-w-2xl mx-auto">
