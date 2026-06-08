@@ -3,11 +3,20 @@ import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import ProjectGrid from './components/ProjectGrid'
 import { ProjectShowcase } from './types'
+import GenAIMission from './projects/GenAIMission'
 import ColorGradientPlayground from './projects/ColorGradient'
 import AnimationLab from './projects/AnimationLab'
 import InteractiveCardDemo from './projects/InteractiveCard'
 
 const projects: ProjectShowcase[] = [
+  {
+    id: 'genai-mission',
+    name: 'Operation: GenAI Ascension',
+    description: 'The epic journey of Jonathan, Pan, and Jake bringing Fortune 50 GenAI to life',
+    category: 'Featured Project',
+    component: <GenAIMission />,
+    featured: true,
+  },
   {
     id: 'color-gradient',
     name: 'Color Gradient Lab',
